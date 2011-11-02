@@ -12,8 +12,8 @@ header {
             margin: 0 auto; 
             position: fixed;
         }
-        header h1 { margin: 0; }
-        header h1 a, .logo a { 
+        header h2 { margin: 0; }
+        header h2 a, .logo a { 
             display: block; 
             margin: 0;
             background: url(../img/logo.png) no-repeat; 
@@ -25,7 +25,8 @@ header {
             top: -10px;
             z-index: 500;
         }
-        header h2 { position: absolute; left: 275px; line-height: 50px; color: #fff; font-weight: 700; font-size: 32px; }
+        header h3 a { display: inline-block; margin-left: 250px; font: 400 24px/1 proxima-nova,sans-serif; }
+        header h1 { position: absolute; left: 275px; line-height: 50px; color: #fff; font-weight: 700; font-size: 32px; }
 
 #map { 
     position: absolute;
@@ -35,20 +36,22 @@ header {
     bottom: 0;
     z-index: 1;
 }
-
-.wax-legends {
+.wax-legends .wax-legend {
+    width: 200px;
     max-width: 300px;
     -webkit-box-shadow: 0 1px 10px rgba(0,0,0,.5);
        -moz-box-shadow: 0 1px 10px rgba(0,0,0,.5);
             box-shadow: 0 1px 10px rgba(0,0,0,.5);
+    background: rgba(255,255,255,.9);
+    color: #333;
 }
 
 .wax-tooltip {
     display: none;
     z-index:999999;
     position:absolute;
-    background: rgba(0,0,0,.8);
-    color:#fff;
+    background: rgba(255,255,255,.9);
+    color:#333;
     padding:10px;
     max-width:300px;
     opacity:1;
@@ -59,8 +62,9 @@ header {
             box-shadow: 0 1px 10px rgba(0,0,0,.5);
 }
 .wax-tooltip p { margin: 0; }
-
-.wax-tooltip strong { font-size: 1.3em; font-weight: 700; color: #fff;}
+.wax-tooltip .label { font-weight: bold; }
+.wax-tooltip .num { text-align: right; clear: both; }
+.wax-tooltip h4 { font-size: 1.3em; font-weight: 700; padding: 0 0 5px; margin: 0 0 5px; border-bottom: 1px solid #ccc;  }
 a.wax-fullscreen { display: none; }
 a.zoomer { 
     font-family: proxima-nova,sans-serif;
@@ -75,31 +79,27 @@ a.zoomer.zoomout { line-height: 20px; }
 a.zoomer:hover { background: rgba(0,0,0,1); }
 
 ul.maps {
-    z-index:999999;
+    z-index:100;
     position:absolute;
-    left: 10px;
-    top: 50px;
-    background: rgba(0,0,0,.8);
-    color:#fff;
-    padding:10px;
-    max-width:300px;
-    opacity:1;
-    -webkit-transition:opacity .5s;
-    -moz-transition:opacity .5s;
-    -webkit-box-shadow: 0 1px 10px rgba(0,0,0,.5);
-    -moz-box-shadow: 0 1px 10px rgba(0,0,0,.5);
-    box-shadow: 0 1px 10px rgba(0,0,0,.5);
+    width: 100%;
+    bottom: 0;
+    color:#333;
+    padding: 0; 
+    background: rgba(0,0,0,.7);
+    margin: 0;
 }
+
+ul.maps li { float: left; margin: 0; }
+ul.maps li:first { border-right: 1px solid #333; }
 
 ul.maps li a {
     color: #fff;
+    font-weight: bold;
+    line-height: 50px; 
+    display: block;
     text-decoration: none;
+    padding: 0 10px;
 }
 
-ul.maps li:hover a {
-    font-weight: bold;
-}
-
-ul.maps li a.active {
-    font-weight: bold;
-}
+ul.maps li a.active { background: #d8472b; position: relative; }
+ul.maps li a.active:after { content: " "; display: block; width: 10px; height: 10px; background: #d8472b; position: absolute; left: 50%; top: -5px; -webkit-transform:rotate(45deg); -moz-transform:rotate(45deg); }

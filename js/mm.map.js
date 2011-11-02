@@ -8,12 +8,12 @@ var base_layers = ['mapbox.world-bright'];
 var layers = {
     'charter-schools': {
         slug: "npr.florida-charter-schools",
-        title: "Portion of Students in Charter School"
+        title: "Charter School Students"
     },
     
     'student-population': {
         slug: "npr.florida-student-population",
-        title: "Total Student Population"
+        title: "Total Students"
     }
 };
 
@@ -76,7 +76,7 @@ function refreshMap(slug) {
 $(function() {
     refreshMap(DEFAULT_MAP);
     var list = buildMapList();
-    list.appendTo($('#map'));
+    list.appendTo($('#map-container'));
     
     // set the initial map as active
     $('#' + DEFAULT_MAP).addClass('active');
