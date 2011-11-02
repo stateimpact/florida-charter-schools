@@ -1,6 +1,6 @@
 var mm = com.modestmaps;
 
-var map;
+var map = window.map || {};
 var DEFAULT_MAP = 'charter-schools';
 
 var baseurl = "http://api.tiles.mapbox.com/v2/";
@@ -41,7 +41,7 @@ function buildMapList() {
 }
 
 
-var USA = new mm.Location(38.994, -94.658);
+var FLORIDA = new mm.Location(27.936, -82.463);
 
 function refreshMap(slug) {    
     var tiles = getTiles(slug);
@@ -53,7 +53,7 @@ function refreshMap(slug) {
             map.setProvider(new wax.mm.connector(tilejson));
         } else {
             map = new mm.Map('map', new wax.mm.connector(tilejson));
-            map.setCenterZoom(USA, 4);
+            map.setCenterZoom(FLORIDA, 6);
             wax.mm.zoomer(map).appendTo(map.parent);
             wax.mm.hash(map);
         }
@@ -100,7 +100,9 @@ $(function() {
 
 $(window).resize(function() {
     var p = new mm.Point($(window).width(), $(window).height())
-    map.setSize(p);
+    if (map.setSize) {
+        map.setSize(p);
+    }
 });
 
 $(function($) {
