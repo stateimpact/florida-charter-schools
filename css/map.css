@@ -27,7 +27,7 @@ header {
 
 #map { 
     position: absolute;
-    top: 50px;
+    top: 0;
     right: 0;
     left: 0; 
     bottom: 0;
@@ -81,8 +81,8 @@ a.zoomer {
 }
 a.zoomer.zoomout { line-height: 20px; }
 a.zoomer:hover { background: rgba(0,0,0,1); }
-a.zoomin { left: 205px; }
-a.zoomout { left: 205px; top: 52px; }
+a.zoomin { left: 205px; top: 75px;  }
+a.zoomout { left: 205px; top: 102px; }
 
 div.wax-attribution { font-size: 14px; right: 0; left: auto; z-index: 800; color: #fff; }
 
