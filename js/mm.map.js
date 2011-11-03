@@ -4,7 +4,8 @@ var map = window.map || {};
 var DEFAULT_MAP = 'charter-schools';
 
 var baseurl = "http://api.tiles.mapbox.com/v2/";
-var base_layers = ['mapbox.world-bright'];
+var base_layers = ['npr.USA-blank-trans-z11',
+        'npr.world-blank-bright-0-10'];
 var layers = {
     'charter-schools': {
         slug: "npr.florida-charter-schools",
@@ -16,12 +17,13 @@ var layers = {
         title: "Total Students"
     }
 };
+var top_layer = ['mapbox.world-borders-dark'];
 
 function getTiles(slug) {
     var data = layers[slug];
     if (!data) return;
     
-    var tiles = _.union(base_layers, [data.slug]);
+    var tiles = _.union(base_layers, [data.slug], top_layer);
     return tiles.join(',');
 }
 
