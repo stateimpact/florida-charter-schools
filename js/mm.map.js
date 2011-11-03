@@ -55,7 +55,7 @@ function refreshMap(slug) {
             map.setProvider(new wax.mm.connector(tilejson));
         } else {
             map = new mm.Map('map', new wax.mm.connector(tilejson));
-            map.setCenterZoom(FLORIDA, 6);
+            map.setCenterZoom(FLORIDA, 7);
             wax.mm.zoomer(map).appendTo(map.parent);
             wax.mm.hash(map);
         }
@@ -65,7 +65,11 @@ function refreshMap(slug) {
         }
         window.legend = wax.mm.legend(map, tilejson).appendTo(map.parent);
         //window.fullscreen = wax.mm.fullscreen(map, tilejson).appendTo(map.parent);
-        wax.mm.attribution(map, tilejson).appendTo(map.parent);
+        if (window.attribution) {
+            $(window.attribution.element()).remove()
+        }
+        window.attribution = wax.mm.attribution(map, tilejson).appendTo(map.parent);
+        
 
         if (window.interaction) {
             window.interaction.remove();
