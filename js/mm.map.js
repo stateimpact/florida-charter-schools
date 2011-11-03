@@ -127,12 +127,12 @@ $(function($) {
         }
         if ( e.pageY - $('#map').scrollTop() + $('.wax-tooltip').height() > $('#map').height()){
             $('.wax-tooltip').css({
-                'bottom' : $('#map').height() - e.pageY + 60,
+                'bottom' : $('#map').height() - e.pageY + 10,
                 'top' : 'auto' 
             });
         } else {
             $('.wax-tooltip').css({
-                'top' : e.pageY - 20,
+                'top' : e.pageY + 20,
                 'bottom' : 'auto'
             });
         }   

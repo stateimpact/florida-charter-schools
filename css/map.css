@@ -22,20 +22,22 @@ header {
             z-index: 500;
             margin: -20px 0 0 10px;
         }
-        header h3 a { display: block; float: left;  font: 400 32px/1 proxima-nova,sans-serif; color: #fff; text-decoration: none; }
-        header h1 { display: block; float: left; line-height: 1; color: #fff; font-weight: 700; font-size: 32px; padding: 0 0 0 25px; margin: 0 0 0 25px; border-left: 1px solid #999; }
+
+        header h3 a { display: block; float: left;  font: 400 32px/1 proxima-nova,sans-serif; color: #fff; text-decoration: none; margin-left: 10px; }
+        header h1 { display: block; float: left; line-height: 1; color: #fff; font-weight: 700; font-size: 32px; padding: 0 0 0 15px; margin: 0 0 0 15px; border-left: 1px solid #999; }
 
 #map { 
     position: absolute;
-    top: 50px;
+    top: 0;
     right: 0;
     left: 0; 
     bottom: 0;
     z-index: 1;
 }
-.wax-legends { bottom: 15px; right: 10px; left: auto; }
+
+.wax-legends { bottom: 50px; left: 15px; right: auto; }
 .wax-legends .wax-legend {
-    width: 200px;
+    width: 160px;
     max-width: 300px;
     -webkit-box-shadow: 0 1px 10px rgba(0,0,0,.5);
        -moz-box-shadow: 0 1px 10px rgba(0,0,0,.5);
@@ -43,7 +45,12 @@ header {
     background: rgba(255,255,255,.9);
     color: #333;
 }
+
+.wax-legends .wax-legend li { margin-bottom: 5px; }
+.wax-legends .wax-legend h3 { line-height: 1.1; font-size: 24px; }
 .wax-legend .explainer { font: normal 14px/1.2 proxima-nova,sans-serif; }
+.wax-legend .source a { font: bold 14px/1.2 proxima-nova,sans-serif; color: #BF3119; text-decoration: none; }
+.wax-legend .source a:hover { text-decoration: underline; }
 
 
 .wax-tooltip {
@@ -64,12 +71,14 @@ header {
 .wax-tooltip p { margin: 0; }
 .wax-tooltip .label { font-weight: bold; }
 .wax-tooltip .num { text-align: right; clear: both; padding: 0 5px; }
-.wax-tooltip  td { border-top: 1px solid #ddd; padding: 3px 0; font-size: 16px; }
-.wax-tooltip h4 { font-size: 1.2em; font-weight: 700; padding: 0 0 5px; margin: 0; }
+
+.wax-tooltip  td { border-top: 1px solid #ddd; padding: 3px 0; }
+.wax-tooltip h4 { font-size: 1.3em; font-weight: 700; padding: 0 0 5px; margin: 0; }
+
 a.wax-fullscreen { display: none; }
 a.zoomer { 
     font-family: proxima-nova,sans-serif;
-    top: 10px;
+    top: 25px;
     font-weight: 400; 
     font-size: 1.5em; 
     -webkit-border-radius: 3px;
@@ -78,6 +87,10 @@ a.zoomer {
 }
 a.zoomer.zoomout { line-height: 20px; }
 a.zoomer:hover { background: rgba(0,0,0,1); }
+a.zoomin { left: 205px; top: 75px;  }
+a.zoomout { left: 205px; top: 102px; }
+
+div.wax-attribution { font-size: 14px; right: 0; left: auto; z-index: 800; color: #fff; }
 
 
 div.wax-attribution { font-size: 14px; }
@@ -85,27 +98,34 @@ div.wax-attribution { font-size: 14px; }
 ul.maps {
     z-index:600;
     position:absolute;
-    top: 0;
-    right: 0;
+    width: 180px;
+    top: 75px;
+    left: 15px;
     color:#333;
     padding: 0; 
-    background: rgba(255,255,255,.1);
+    background: rgba(255,255,255,.9);
     margin: 0;
-    border-left: 1px solid #333;
+    -webkit-box-shadow: 0 1px 10px rgba(0,0,0,.5);
+       -moz-box-shadow: 0 1px 10px rgba(0,0,0,.5);
+            box-shadow: 0 1px 10px rgba(0,0,0,.5);
 }
 
-ul.maps li { float: left; margin: 0; }
-ul.maps li:first { border-right: 1px solid #333; }
+ul.maps li { margin: 0; }
+ul.maps li:first {  }
 
 ul.maps li a {
-    color: #fff;
+    color: #333;
     font-weight: bold;
-    line-height: 50px; 
+    line-height: 35px; 
     display: block;
     text-decoration: none;
     padding: 0 10px;
     background: transparent;
 }
 
-ul.maps li a.active { background: #d8472b; position: relative; }
-ul.maps li a.active:after { content: " "; display: block; width: 10px; height: 10px; background: #d8472b; position: absolute; left: 50%; bottom: -5px; -webkit-transform:rotate(45deg); -moz-transform:rotate(45deg); }
+ul.maps li a.active { background: #BF3119; color: #fff; position: relative; }
+/*ul.maps li a.active:after { content: " "; display: block; width: 10px; height: 10px; background: #d8472b; position: absolute; left: -5px; top: 50%; -webkit-transform:rotate(45deg); -moz-transform:rotate(45deg); }*/
+
+footer { position: absolute; width: 100%; bottom: 0; left: 0; height: 35px; background: rgba(0,0,0,.8); z-index: 1; }
+footer h3 { font-size: 18px; color: #aaa; margin-left: 15px; font: normal 13px/35px "Helvetica Neue",Arial,sans-serif; }
+.nprlogo { display: inline-block; text-indent: -999em; width: 51px; height: 35px; background: url(../img/npr-transparent.png) no-repeat left center; margin: 0 0 0 3px; }
