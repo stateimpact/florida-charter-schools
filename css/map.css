@@ -23,7 +23,7 @@ header {
             margin: -20px 0 0 10px;
         }
 
-        header h3 a { display: block; float: left;  font: 400 32px/1 proxima-nova,sans-serif; color: #fff; text-decoration: none; margin-left: 10px; }
+        header h3 a, header h3 a:hover { display: block; float: left;  font: 400 32px/1 proxima-nova,sans-serif; color: #fff; text-decoration: none; margin-left: 10px; }
         header h1 { display: block; float: left; line-height: 1; color: #fff; font-weight: 700; font-size: 32px; padding: 0 0 0 15px; margin: 0 0 0 15px; border-left: 1px solid #999; }
 
 #map { 
@@ -72,7 +72,7 @@ header {
 .wax-tooltip .label { font-weight: bold; }
 .wax-tooltip .num { text-align: right; clear: both; padding: 0 5px; }
 
-.wax-tooltip  td { border-top: 1px solid #ddd; padding: 3px 0; }
+.wax-tooltip  tr:nth-child(odd) td { background: #e5e5e5; padding: 3px; }
 .wax-tooltip h4 { font-size: 1.3em; font-weight: 700; padding: 0 0 5px; margin: 0; }
 
 a.wax-fullscreen { display: none; }
