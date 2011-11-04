@@ -129,3 +129,19 @@ ul.maps li a.active { background: #BF3119; color: #fff; position: relative; }
 footer { position: absolute; width: 100%; bottom: 0; left: 0; height: 35px; background: rgba(0,0,0,.8); z-index: 1; }
 footer h3 { font-size: 18px; color: #aaa; margin-left: 15px; font: normal 13px/35px "Helvetica Neue",Arial,sans-serif; }
 .nprlogo { display: inline-block; text-indent: -999em; width: 51px; height: 35px; background: url(../img/npr-transparent.png) no-repeat left center; margin: 0 0 0 3px; }
+
+#sharing {
+  float: right;
+}
+
+#sharing iframe {
+  float: left;
+  padding-right: 10px;
+}
+
+a.embed {
+  color: #fff;
+  text-decoration: none;
+  float: left;
+  margin-right: 10px;
+}

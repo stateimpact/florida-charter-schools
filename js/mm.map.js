@@ -59,6 +59,7 @@ function refreshMap(slug) {
             wax.mm.zoomer(map).appendTo(map.parent);
             wax.mm.hash(map);
         }
+        map.activeLayer = slug;
         
         if (window.legend) {
             $(window.legend.element()).remove();
@@ -78,6 +79,26 @@ function refreshMap(slug) {
     });
     return map;
 }
+
+// Open a modal window
+function openModal(element) {
+  $('#overlay, ' + element).css('display', 'block');
+}
+
+$(function() {
+    $('a.embed').click(function(e) {
+        console.log(this);
+        e.preventDefault();
+        var layers = getTiles(map.activeLayer);
+        var center = map.pointLocation(new mm.Point(map.dimensions.x/2,map.dimensions.y/2));
+        var embedUrl = 'http://api.tiles.mapbox.com/v2/' + layers + '/mm/tooltips,legend,bwdetect.html#' + map.coordinate.zoom + '/' + center.lat + '/' + center.lon;
+        $('#embed-code-field input').attr('value', '<iframe src="' + embedUrl + '" frameborder="0" width="650" height="500"></iframe>');
+        openModal('#modal-embed');
+        $('#embed-code')[0].tabindex = 0;
+        $('#embed-code')[0].focus();
+        $('#embed-code')[0].select();
+    });
+})
 
 $(function() {
     refreshMap(DEFAULT_MAP);
