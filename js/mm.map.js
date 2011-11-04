@@ -51,6 +51,9 @@ function refreshMap(slug) {
 
     wax.tilejson(url, function(tilejson) {
         window.tilejson = tilejson;
+        tilejson.minzoom = 6;
+        tilejson.maxzoom = 9;
+        
         if (map.setProvider) {
             map.setProvider(new wax.mm.connector(tilejson));
         } else {
