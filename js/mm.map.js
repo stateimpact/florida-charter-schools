@@ -98,6 +98,12 @@ $(function() {
         $('#embed-code')[0].focus();
         $('#embed-code')[0].select();
     });
+    
+    $(document.documentElement).keydown(function (e) {
+        if (event.keyCode == 27) {
+            $('a.close').trigger('click');
+        }
+    });
 })
 
 $(function() {
