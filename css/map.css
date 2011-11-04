@@ -23,7 +23,7 @@ header {
             margin: -20px 0 0 10px;
         }
 
-        header h3 a { display: block; float: left;  font: 400 32px/1 proxima-nova,sans-serif; color: #fff; text-decoration: none; margin-left: 10px; }
+        header h3 a, header h3 a:hover { display: block; float: left;  font: 400 32px/1 proxima-nova,sans-serif; color: #fff; text-decoration: none; margin-left: 10px; }
         header h1 { display: block; float: left; line-height: 1; color: #fff; font-weight: 700; font-size: 32px; padding: 0 0 0 15px; margin: 0 0 0 15px; border-left: 1px solid #999; }
 
 #map { 
@@ -37,7 +37,7 @@ header {
 
 .wax-legends { bottom: 50px; left: 15px; right: auto; }
 .wax-legends .wax-legend {
-    width: 160px;
+    width: 220px;
     max-width: 300px;
     -webkit-box-shadow: 0 1px 10px rgba(0,0,0,.5);
        -moz-box-shadow: 0 1px 10px rgba(0,0,0,.5);
@@ -49,6 +49,7 @@ header {
 .wax-legends .wax-legend li { margin-bottom: 5px; }
 .wax-legends .wax-legend h3 { line-height: 1.1; font-size: 24px; }
 .wax-legend .explainer { font: normal 14px/1.2 proxima-nova,sans-serif; }
+.wax-legend .source { margin: 0 0 5px; line-height: 1.1; }
 .wax-legend .source a { font: bold 14px/1.2 proxima-nova,sans-serif; color: #BF3119; text-decoration: none; }
 .wax-legend .source a:hover { text-decoration: underline; }
 
@@ -72,7 +73,7 @@ header {
 .wax-tooltip .label { font-weight: bold; }
 .wax-tooltip .num { text-align: right; clear: both; padding: 0 5px; }
 
-.wax-tooltip  td { border-top: 1px solid #ddd; padding: 3px 0; }
+.wax-tooltip  tr:nth-child(odd) td { background: #e5e5e5; padding: 3px; }
 .wax-tooltip h4 { font-size: 1.3em; font-weight: 700; padding: 0 0 5px; margin: 0; }
 
 a.wax-fullscreen { display: none; }
