@@ -9,12 +9,12 @@ var base_layers = ['npr.USA-blank-trans-z11',
 var layers = {
     'charter-schools': {
         slug: "npr.florida-charter-schools",
-        title: "Charter School Students"
+        title: "Charter Students"
     },
     
     'student-population': {
         slug: "npr.florida-student-population",
-        title: "Total Students"
+        title: "All Students"
     }
 };
 var top_layer = ['mapbox.world-borders-dark'];
