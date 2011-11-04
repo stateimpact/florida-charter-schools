@@ -35,7 +35,7 @@ header {
     z-index: 1;
 }
 
-.wax-legends { bottom: 50px; right: 15px; left: auto; }
+.wax-legends { bottom: 50px; right: 15px; left: auto; z-index: 200;}
 .wax-legends .wax-legend {
     width: 220px;
     max-width: 300px;
@@ -56,7 +56,7 @@ header {
 
 .wax-tooltip {
     display: none;
-    z-index:999999;
+    z-index:650;
     position:absolute;
     background: rgba(255,255,255,.9);
     color:#333;
@@ -73,7 +73,7 @@ header {
 .wax-tooltip .label { font-weight: bold; }
 .wax-tooltip .num { text-align: right; clear: both; padding: 0 5px; }
 
-.wax-tooltip  tr:nth-child(odd) td { background: #e5e5e5; padding: 3px; }
+.wax-tooltip td { border-top: 1px solid #ddd; padding: 0 2px; }
 .wax-tooltip h4 { font-size: 1.3em; font-weight: 700; padding: 0 0 5px; margin: 0; }
 
 a.wax-fullscreen { display: none; }
@@ -97,7 +97,7 @@ div.wax-attribution { font-size: 14px; right: 0; left: auto; z-index: 800; color
 div.wax-attribution { font-size: 14px; }
 
 ul.maps {
-    z-index:600;
+    z-index:9999;
     position:absolute;
     width: 180px;
     top: 75px;
@@ -128,21 +128,20 @@ ul.maps li a.active { background: #BF3119; color: #fff; position: relative; bord
 /*ul.maps li a.active:after { content: " "; display: block; width: 10px; height: 10px; background: #d8472b; position: absolute; left: -5px; top: 50%; -webkit-transform:rotate(45deg); -moz-transform:rotate(45deg); }*/
 
 footer { position: absolute; width: 100%; bottom: 0; left: 0; height: 35px; background: rgba(0,0,0,.8); z-index: 1; }
-footer h3 { font-size: 18px; color: #aaa; margin-left: 15px; font: normal 13px/35px "Helvetica Neue",Arial,sans-serif; }
+footer h3 { font-size: 18px; color: #aaa; margin-left: 15px; font: normal 13px/35px "Helvetica Neue",Arial,sans-serif; float: left; }
 .nprlogo { display: inline-block; text-indent: -999em; width: 51px; height: 35px; background: url(../img/npr-transparent.png) no-repeat left center; margin: 0 0 0 3px; }
 
-#sharing {
+.sharing {
   float: right;
+  line-height: 35px;
+  list-style: none; 
 }
-
-#sharing iframe {
-  float: left;
-  padding-right: 10px;
-}
+.sharing li { float: left; height: 20px; margin: 7px 10px 0 0; }
 
 a.embed {
   color: #fff;
   text-decoration: none;
+  font-weight: bold;
   float: left;
   margin-right: 10px;
 }
@@ -169,7 +168,6 @@ a.embed {
     -moz-box-shadow: 0px 0px 5px rgba(0,0,0,.5);
     -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,.5);
     padding: 20px;
-    height: 280px;
     z-index: 99;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -177,12 +175,13 @@ a.embed {
     width: 400px;
     clear: both;
     margin: auto;
+    overflow: hidden;
 }
 
 .modal .popup p {
+    font: normal 14px/1.2 proxima-nova,sans-serif;
     margin-bottom: 1em;
     font-weight: 400;
-    font-size: 11px;
     line-height: 1.3;
     color: #ccc;
 }
@@ -244,4 +243,3 @@ a.embed {
     float: left;
     width: 50%;
 }
-
