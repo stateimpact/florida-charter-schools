@@ -112,7 +112,7 @@ $(function() {
             $('a.close').trigger('click');
         }
     });
-})
+});
 
 $(function() {
     refreshMap(DEFAULT_MAP);
