@@ -80,14 +80,14 @@ function refreshMap(slug) {
     return map;
 }
 
-// Open a modal window
-function openModal(element) {
-  $('#overlay, ' + element).css('display', 'block');
-}
 
 $(function() {
+    // Open a modal window
+    function openModal(element) {
+      $('#overlay, ' + element).css('display', 'block');
+    }
+    
     $('a.embed').click(function(e) {
-        console.log(this);
         e.preventDefault();
         var layers = getTiles(map.activeLayer);
         var center = map.pointLocation(new mm.Point(map.dimensions.x/2,map.dimensions.y/2));
@@ -97,6 +97,14 @@ $(function() {
         $('#embed-code')[0].tabindex = 0;
         $('#embed-code')[0].focus();
         $('#embed-code')[0].select();
+    });
+    
+    
+    // Close modals
+    $('.modal a.close').click(function (e){
+        e.preventDefault();
+        $('#overlay').hide();
+        $(this).closest('.modal').hide();
     });
     
     $(document.documentElement).keydown(function (e) {
