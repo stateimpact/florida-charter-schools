@@ -35,7 +35,7 @@ header {
     z-index: 1;
 }
 
-.wax-legends { bottom: 50px; left: 15px; right: auto; }
+.wax-legends { bottom: 50px; right: 15px; left: auto; }
 .wax-legends .wax-legend {
     width: 220px;
     max-width: 300px;
