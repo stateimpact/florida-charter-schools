@@ -37,7 +37,7 @@ header {
 
 .wax-legends { bottom: 50px; left: 15px; right: auto; }
 .wax-legends .wax-legend {
-    width: 160px;
+    width: 220px;
     max-width: 300px;
     -webkit-box-shadow: 0 1px 10px rgba(0,0,0,.5);
        -moz-box-shadow: 0 1px 10px rgba(0,0,0,.5);
@@ -49,6 +49,7 @@ header {
 .wax-legends .wax-legend li { margin-bottom: 5px; }
 .wax-legends .wax-legend h3 { line-height: 1.1; font-size: 24px; }
 .wax-legend .explainer { font: normal 14px/1.2 proxima-nova,sans-serif; }
+.wax-legend .source { margin: 0 0 5px; line-height: 1.1; }
 .wax-legend .source a { font: bold 14px/1.2 proxima-nova,sans-serif; color: #BF3119; text-decoration: none; }
 .wax-legend .source a:hover { text-decoration: underline; }
 
