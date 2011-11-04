@@ -49,7 +49,7 @@ header {
 .wax-legends .wax-legend li { margin-bottom: 5px; }
 .wax-legends .wax-legend h3 { line-height: 1.1; font-size: 24px; }
 .wax-legend .explainer { font: normal 14px/1.2 proxima-nova,sans-serif; }
-.wax-legend .source { margin: 0 0 5px; line-height: 1.1; }
+.wax-legend .source { margin: 0 0 5px; line-height: 1.1;}
 .wax-legend .source a { font: bold 14px/1.2 proxima-nova,sans-serif; color: #BF3119; text-decoration: none; }
 .wax-legend .source a:hover { text-decoration: underline; }
 
@@ -111,20 +111,20 @@ ul.maps {
             box-shadow: 0 1px 10px rgba(0,0,0,.5);
 }
 
-ul.maps li { margin: 0; }
-ul.maps li:first {  }
+ul.maps li { margin: 0; border-top: 1px solid #eee; }
+ul.maps li:first-child { border-top: none; }
 
 ul.maps li a {
     color: #333;
     font-weight: bold;
-    line-height: 35px; 
+    line-height: 20px; 
+    padding: 5px;
     display: block;
     text-decoration: none;
-    padding: 0 10px;
     background: transparent;
 }
 
-ul.maps li a.active { background: #BF3119; color: #fff; position: relative; }
+ul.maps li a.active { background: #BF3119; color: #fff; position: relative; border-top: none; }
 /*ul.maps li a.active:after { content: " "; display: block; width: 10px; height: 10px; background: #d8472b; position: absolute; left: -5px; top: 50%; -webkit-transform:rotate(45deg); -moz-transform:rotate(45deg); }*/
 
 footer { position: absolute; width: 100%; bottom: 0; left: 0; height: 35px; background: rgba(0,0,0,.8); z-index: 1; }
