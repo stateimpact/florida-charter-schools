@@ -152,9 +152,9 @@ $(window).resize(function() {
 $(function($) {
     $(document).mousemove(function(e) {
         $('.wax-tooltip').css({ 'display' : 'block' });
-        if ( e.pageX + 150 > $(document).width()){
+        if ( (e.pageX +  $('.wax-tooltip').width()) > $(window).width()){
             $('.wax-tooltip').css({
-                'right' : $(document).width() - e.pageX,
+                'right' : $(window).width() - e.pageX,
                 'left' : 'auto'
             });
         } else {
@@ -163,7 +163,7 @@ $(function($) {
                 'right' : 'auto'
             });
         }
-        if ( e.pageY - $('#map').scrollTop() + $('.wax-tooltip').height() > $('#map').height()){
+        if ( e.pageY + $('.wax-tooltip').height() > ($('#map').height() - 80)){
             $('.wax-tooltip').css({
                 'bottom' : $('#map').height() - e.pageY + 10,
                 'top' : 'auto' 

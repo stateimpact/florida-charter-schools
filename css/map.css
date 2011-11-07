@@ -63,6 +63,7 @@ header h1 { display: block; float: left; line-height: 50px; color: #fff; font-we
 
 
 .wax-tooltip {
+    min-width: 200px;
     display: none;
     z-index:650;
     position:absolute;
