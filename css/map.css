@@ -27,7 +27,19 @@ header h2 a, .logo a {
 }
 header h3, header h2 { margin: 0; }
 
-header h3 a, header h3 a:hover, header h3 a:visited { display: block; float: left;  font: 400 32px/50px proxima-nova,sans-serif; color: #fff; text-decoration: none; padding: 0 15px 0 0; margin: 0 0 0 10px; border-right: 1px solid #444; }
+header h3 a, header h3 a:hover, header h3 a:visited { 
+    display: block; 
+    float: left;  
+    font: 400 32px/50px proxima-nova,sans-serif; 
+    color: #fff; 
+    text-decoration: none; 
+    padding: 0 15px 0 0; 
+    margin: 0 0 0 10px; 
+    border-right: 1px solid #444; 
+    -webkit-box-shadow: 1px 0 0 #000;
+       -moz-box-shadow: 1px 0 0 #000;
+            box-shadow: 1px 0 0 #000;
+}
 header h1 { display: block; float: left; line-height: 50px; color: #fff; font-weight: 700; font-size: 32px; margin: 0 0 0 15px;  }
 
 #map { 
