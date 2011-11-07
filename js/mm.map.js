@@ -58,7 +58,7 @@ function refreshMap(slug) {
             map.setProvider(new wax.mm.connector(tilejson));
         } else {
             map = new mm.Map('map', new wax.mm.connector(tilejson));
-            map.setCenterZoom(FLORIDA, 7);
+            map.setCenterZoom(FLORIDA, 6);
             wax.mm.zoomer(map).appendTo(map.parent);
             wax.mm.hash(map);
         }
