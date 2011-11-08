@@ -69,8 +69,8 @@ header h1 { display: block; float: left; line-height: 50px; color: #fff; font-we
 .wax-legends .wax-legend li { margin-bottom: 5px; }
 .wax-legends .wax-legend h3 { line-height: 1.1; font-size: 24px; }
 .wax-legend .explainer { font: normal 14px/1.2 proxima-nova,sans-serif; }
-.wax-legend .source { margin: 0 0 5px; line-height: 1;}
-.wax-legend .source a { font: normal 14px/1 proxima-nova,sans-serif; color: #666; text-decoration: none; }
+.wax-legend .source { font: normal 14px/1 proxima-nova,sans-serif; margin: 0 0 5px; }
+.wax-legend .source a { color: #666; text-decoration: none; }
 .wax-legend .source a:hover { text-decoration: underline; }
 
 .wax-tooltip {
