@@ -69,10 +69,9 @@ header h1 { display: block; float: left; line-height: 50px; color: #fff; font-we
 .wax-legends .wax-legend li { margin-bottom: 5px; }
 .wax-legends .wax-legend h3 { line-height: 1.1; font-size: 24px; }
 .wax-legend .explainer { font: normal 14px/1.2 proxima-nova,sans-serif; }
-.wax-legend .source { margin: 0 0 5px; line-height: 1.1;}
-.wax-legend .source a { font: bold 14px/1.2 proxima-nova,sans-serif; color: #BF3119; text-decoration: none; }
+.wax-legend .source { margin: 0 0 5px; line-height: 1;}
+.wax-legend .source a { font: normal 14px/1 proxima-nova,sans-serif; color: #666; text-decoration: none; }
 .wax-legend .source a:hover { text-decoration: underline; }
-
 
 .wax-tooltip {
     min-width: 200px;
@@ -94,7 +93,6 @@ header h1 { display: block; float: left; line-height: 50px; color: #fff; font-we
 .wax-tooltip p { margin: 0; }
 .wax-tooltip .label { font-weight: bold; }
 .wax-tooltip .num { text-align: right; clear: both; padding: 0 5px; }
-
 .wax-tooltip td { border-top: 1px solid #ddd; padding: 0 2px; }
 .wax-tooltip h4 { font-size: 1.3em; font-weight: 700; padding: 0 0 5px; margin: 0; }
 
